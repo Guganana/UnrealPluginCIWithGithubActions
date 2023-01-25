@@ -12,21 +12,16 @@ Due to Unreal Engine's EULA it's not possible to share the minimal versions of t
 
 ```mermaid
 graph TB
-A(Code Plugin<br>repo on Github)
+A(Your Code Plugin<br>repo on Github)
 E(Generated Build Artifacts)
 
 subgraph one["UnrealCodeBuilder<br> Github Workflows"]
     direction LR
     CA(UnrealCodeBuilder<br>Github Action)
-    CB{Either}
-    DA((Self created<br/> MinimalUE Build))
-    DB((Guganana's<br/>MinimalUE Build))
+    D((Self-created/Guganana's<br/> MinimalUE Build
     Compile(Compile Plugin)
-    CA --- CB
-    CB --- DA
-    CB --- DB
-    DA --> Compile
-    DB --> Compile
+    CA --- D
+    D --> Compile
 end
 
 A -- Use custom workflow --> one

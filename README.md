@@ -9,7 +9,7 @@ Due to Unreal Engine's EULA, <ins>it's not possible to share the minimal version
 - Joining our private team, which uses our internal version of MinimalUE build that can only be accessed by GitHub runners (currently only inviting select individuals)
 
 
-> 😎 This repository already builds its source code every time we make a commit - [Give it a look!](https://github.com/Guganana/UnrealPluginCIWithGithubActions/actions)
+> This repository already builds its source code every time we make a commit 😎 — [Give it a look!](https://github.com/Guganana/UnrealPluginCIWithGithubActions/actions)
 
 **This is still an ongoing effort — we will be making it more widely available with time** 
 
@@ -20,10 +20,12 @@ E(Generated Build Artifacts)
 
 subgraph one[" "]
     direction LR
-    CA(UnrealCodeBuilder<br>Github Action)
-    D((MinimalUE Build))
+    tag>Create your own<br>or<br>Use our private one]
+    C[(MinimalUE<br>Build)]
+    D(UnrealCodeBuilder<br>Github Action)
     Compile(Compile Plugin)
-    CA --- D
+    tag --- C
+    C -.- D
     D --> Compile
 end
 

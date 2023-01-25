@@ -4,7 +4,7 @@ UnrealPluginCIWithGithubActions is a practical example on using **<ins>GitHub Ac
 
 It relies heavily on [MinimalUE](https://github.com/Guganana/MinimalUE) to generate a trimmed, compressed version of Unreal Engine that can only compile projects (going from 50GB to 150MB on UE 5.1), allowing us to easily manage the engine inside the GitHub Actions environment.
 
-Due to Unreal Engine's EULA, it's not possible to share the minimal versions of the engine publicly — thus, there will be two ways of getting this working for you:
+Due to Unreal Engine's EULA, <ins>it's not possible to share the minimal versions of the engine publicly</ins> — thus, there will be two ways of getting this working for you:
 - Creating your own MinimalUE build and hosting it privately (will be releasing a guide in the future)
 - Joining our private team, which uses our internal version of MinimalUE build that can only be accessed by GitHub runners (currently only inviting select individuals)
 
@@ -18,16 +18,16 @@ graph TB
 A(Your Code Plugin<br>repo on Github)
 E(Generated Build Artifacts)
 
-subgraph one["UnrealCodeBuilder<br> Github Workflows"]
+subgraph one[" "]
     direction LR
     CA(UnrealCodeBuilder<br>Github Action)
-    D((Self-created/Guganana's<br> MinimalUE Build))
+    D((MinimalUE Build))
     Compile(Compile Plugin)
     CA --- D
     D --> Compile
 end
 
-A -- Use custom workflow --> one
+A -- Run UnrealCodeBuilder Workflow --> one
 one --> E
 ```
 

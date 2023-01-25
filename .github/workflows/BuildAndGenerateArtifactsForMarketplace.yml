@@ -26,7 +26,7 @@ jobs:
     needs: prepareProject
     uses: guganana/UnrealCodeBuilder/.github/workflows/CompilePlugin.yml@v0.1
     with:
-      projectArtifact: "SourceCode"
+      projectArtifactName: "SourceCode"
       prepareForMarketplace: true
     secrets: inherit
     

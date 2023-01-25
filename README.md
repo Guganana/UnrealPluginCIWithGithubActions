@@ -33,14 +33,43 @@ A -- Use custom workflow --> one
 one --> E
 ```
 
-## Current feature support
+# Getting Started:
+
+> For now section only applies to people using Guganana's private version of MinimalUE
+
+## 1. Defining the plugin metadata
+
+[](./.metadata)
+To produce the build artifacts, [UnrealCodeBuilder workflows](https://github.com/Guganana/UnrealCodeBuilder) require you to specify specify additional information about the plugin (i.e. ProductName, Version, ReleaseFormat).
+
+ For that you need to emulate the folder and file structure found in [.metadata](./.metadata) and fill the files with the relevant data for your project.
+- [.metadata](./.metadata)
+    - [friendlyVersion](./.metadata/friendlyVersion) | e.g: 1.0.2
+    - [productName](./.metadata/productName) | e.g: MyVeryCoolPlugin
+    - [releaseVersionFormat](./.metadata/releaseVersionFormat) | Dynamically evaluated (you can read other env variables) | example uses the friendlyVersion + the commit SHA -> 1.0.2(abcdef)
+    - [releaseNameFormat](./.metadata/releaseNameFormat) | Dynamically evaluated | Used to generate the artifact names (IMPORTANT: make sure to always include $env:UEVersion in the string so you can diferentiate the build artifacts for each unreal version)
+
+For advanced users, you can add more files into  [.metadata](./.metadata) will be converted into environment variables which can be queried by the "Format" ones
+
+If you're on a hurry, you can just copy the example files :)
+
+## 2. Creating the workflow:
+
+Now you can create your own Github Actions workflow and reference [UnrealCodeBuilder's workflows](https://github.com/Guganana/UnrealCodeBuilder):
+
+Inside ```./.github/workflows/```, create your own workflow yaml file which emulates [BuildAndGenerateArtifactsForMarketplace.yml](/.github/workflows/BuildAndGenerateArtifactsForMarketplace.yml):
+
+https://github.com/Guganana/UnrealPluginCIWithGithubActions/blob/bc650c1e19dcde5e396fb08e3ed035f62e2b6510/.github/workflows/BuildAndGenerateArtifactsForMarketplace.yml#L1-L31
+
+## 3. Setting up the secret token:
+
+# Current feature support
 
 | Feature  | Supported  |
 |---|---|
-|Supported for UE versions| 4.27/5.0/5.1  |
+|Supported for UE versions| 4.27 \| 5.0 \| 5.1  |
 |Compilation for Win64|✅|
 |Automatically prepare for Marketplace release|✅|
 |Compilation for MacOS|❌|
 |Compilation for Linux|❌|
 |Run tests after compilation|❌|
-

@@ -1,6 +1,6 @@
 # UnrealPluginWithCI
 
-UnrealPluginWithCI is a practical example on using <ins>Github Actions free tier</ins> with [UnrealCodeBuilder](https://github.com/Guganana/UnrealCodeBuilder) workflows to automate compilation of your Code Plugins for the 3 latest Unreal Engine versions + automatically preparing them for distribution on the Unreal Engine Marketplace. 
+UnrealPluginCIWithGithubActions is a practical example on using **<ins>Github Actions free tier</ins>** with [UnrealCodeBuilder](https://github.com/Guganana/UnrealCodeBuilder) workflows to automate compilation of your Code Plugins for the 3 latest Unreal Engine versions + automatically preparing them for distribution on the Unreal Engine Marketplace. 
 
 It relies heavily on [MinimalUE](https://github.com/Guganana/MinimalUE) to generate a trimmed, compressed version of Unreal Engine that is only capable of compiling projects (i.e. going from 50GB to 150MB on UE 5.1). This way it can be easily managed inside the Github Actions environment.
 

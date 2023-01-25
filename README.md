@@ -19,8 +19,8 @@ subgraph one["UnrealCodeBuilder<br> Github Workflows"]
     direction LR
     CA(UnrealCodeBuilder<br>Github Action)
     CB{Either}
-    DA((MinimalUE<br/>Build))
-    DB((MinimalUE<br/>Build))
+    DA((Self created<br/> MinimalUE Build))
+    DB((Guganana's<br/>MinimalUE Build))
     CA --- CB
     CB --- DA
     CB --- DB

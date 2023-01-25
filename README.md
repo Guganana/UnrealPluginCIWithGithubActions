@@ -35,7 +35,7 @@ one --> E
 
 # Getting Started:
 
-> For now section only applies to people using Guganana's private version of MinimalUE
+> ❗❗ For now section only applies to people using Guganana's private version of MinimalUE.
 
 ## 1. Defining the plugin metadata
 
@@ -61,7 +61,9 @@ Inside ```./.github/workflows/```, create your own workflow yaml file which emul
 
 https://github.com/Guganana/UnrealPluginCIWithGithubActions/blob/bc650c1e19dcde5e396fb08e3ed035f62e2b6510/.github/workflows/BuildAndGenerateArtifactsForMarketplace.yml#L1-L31
 
-## 3. Setting up the secret token:
+## 3. Setting up GUGANANA_BUILD_KEY token:
+In order for the github runners to access our private MinimalUE, you're required to set up the GUGANANA_BUILD_KEY token:
+1. 
 
 # Current feature support
 
@@ -73,3 +75,8 @@ https://github.com/Guganana/UnrealPluginCIWithGithubActions/blob/bc650c1e19dcde5
 |Compilation for MacOS|❌|
 |Compilation for Linux|❌|
 |Run tests after compilation|❌|
+
+# Privacy and Telemetry disclosure
+When using [UnrealCodeBuilder](https://github.com/Guganana/UnrealCodeBuilder), we send a single telemetry event containing the repository name & repository owner. This helps us gauge the usage of our tools and know how important they are to the community.
+
+No other data is collected. Your code is safe!

@@ -1,0 +1,32 @@
+name: "Build & Generate artifacts for Marketplace"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  prepareProject:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3      
+          
+      - name: Upload source code artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: "SourceCode"
+          path: ./
+          retention-days: 1
+          
+  build:
+    needs: prepareProject
+    uses: guganana/UnrealCodeBuilder/.github/workflows/CompilePlugin.yml@v0.1
+    with:
+      projectArtifact: "SourceCode"
+      prepareForMarketplace: true
+    secrets: inherit
+    

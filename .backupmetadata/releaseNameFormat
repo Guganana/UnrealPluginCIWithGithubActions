@@ -1,0 +1,1 @@
+$env:productName-$env:releaseVersion@$env:UEVersion

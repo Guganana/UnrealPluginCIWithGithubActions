@@ -1,0 +1,26 @@
+{
+	"FileVersion": 3,
+	"Version": 123456789,
+	"VersionName": "DEV_VERSION_NAME",
+	"FriendlyName": "EmptyCodePlugin",
+	"Description": "Plugin used to test CI/CD on github actions",
+	"Category": "Misc",
+	"CreatedBy": "Guganana",
+	"CreatedByURL": "https://www.twitter.com/gugananadev",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "EmptyCodePluginRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": ["Win64", "Linux", "Mac", "Android"]
+		},
+	],
+	"EngineVersion": "ENGINE_VERSION"  
+}

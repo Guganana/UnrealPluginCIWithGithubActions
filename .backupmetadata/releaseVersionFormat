@@ -1,0 +1,1 @@
+$env:friendlyVersion($($env:releaseSHA.Substring(0, 7)))

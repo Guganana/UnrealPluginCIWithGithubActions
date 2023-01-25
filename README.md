@@ -63,7 +63,16 @@ https://github.com/Guganana/UnrealPluginCIWithGithubActions/blob/bc650c1e19dcde5
 
 ## 3. Setting up GUGANANA_BUILD_KEY token:
 In order for the github runners to access our private MinimalUE, you're required to set up the GUGANANA_BUILD_KEY token:
-1. 
+1. On your repository page, click on the settings panel.
+2. Expand the ```Secrets and variables``` option on the side panel followed by ```Actions```
+3. Add a new Repository Secret - the secret name should be ```GUGANANA_BUILD_KEY``` while the key is the string provided by us.
+
+## 4. Done!
+You can now go to the Actions Panel to manually trigger a build. You should get the build artifacts for the latest 3 engine versions if it compiles succesfully.
+
+Make sure to download the artifacts and host it on your prefered file hosting service to provide the Unreal Engine Marketplace with download links.
+
+You're always free to extend your automation further and integrate it with other platforms.
 
 # Current feature support
 

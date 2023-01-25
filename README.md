@@ -1,4 +1,4 @@
-# UnrealPluginWithCI
+# UnrealPluginCIWithGithubActions
 
 UnrealPluginCIWithGithubActions is a practical example on using **<ins>Github Actions free tier</ins>** with [UnrealCodeBuilder](https://github.com/Guganana/UnrealCodeBuilder) workflows to automate compilation of your Code Plugins for the 3 latest Unreal Engine versions + automatically preparing them for distribution on the Unreal Engine Marketplace. 
 

@@ -58,11 +58,12 @@ Inside ```./.github/workflows/```, create your own workflow yaml file which emul
 
 https://github.com/Guganana/UnrealPluginCIWithGithubActions/blob/bc650c1e19dcde5e396fb08e3ed035f62e2b6510/.github/workflows/BuildAndGenerateArtifactsForMarketplace.yml#L1-L31
 
-## 3. Setting up GUGANANA_BUILD_KEY token:
+## 3. Setting up GUGANANA_BUILD_KEY and UNREALCODEBUILDER_ENGINE_ENDPOINT secrets:
 In order for the github runners to access our private MinimalUE, you're required to set up the GUGANANA_BUILD_KEY token:
 1. On your repository page, click on the settings panel.
 2. Expand the ```Secrets and variables``` option on the side panel followed by ```Actions```
 3. Add a new Repository Secret - the secret name should be ```GUGANANA_BUILD_KEY``` while the key is the string provided by us.
+4. Create another secret for UNREALCODEBUILDER_ENGINE_ENDPOINT with the value provided by us
 
 ## 4. Done!
 You can now go to the Actions Panel to manually trigger a build. You should get the build artifacts for the latest 3 engine versions if it compiles succesfully.

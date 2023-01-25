@@ -12,7 +12,7 @@ Due to Unreal Engine's EULA it's not possible to share the minimal versions of t
 
 ```mermaid
 graph TB
-A(Code Plugin hosted on Github)
+A(Code Plugin<br>repo on Github)
 E(Build Artifacts)
 
 subgraph one["UnrealCodeBuilder<br> Github Workflows"]

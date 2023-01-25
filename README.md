@@ -8,6 +8,8 @@ Due to Unreal Engine's EULA it's not possible to share the minimal versions of t
 - Joining our private team which uses our internal version of MinimalUE build that can only be accessed by github runners (currently only inviting select individuals)
 - Creating your own MinimalUE build and hosting it privately (will be releasing a guide in the future)
 
+This repository already builds its code every time we make a commit - [Give it a look!](https://github.com/Guganana/UnrealPluginCIWithGithubActions/actions)
+
 **This is still an ongoing effort — we will be making it more widely available with time**
 
 ```mermaid

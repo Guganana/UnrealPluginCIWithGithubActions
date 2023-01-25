@@ -20,11 +20,9 @@ E(Generated Build Artifacts)
 
 subgraph one[" "]
     direction LR
-    tag>Create your own<br>or<br>Use our private one]
     C[(MinimalUE<br>Build)]
     D(UnrealCodeBuilder<br>Github Action)
     Compile(Compile Plugin)
-    tag --- C
     C -.- D
     D --> Compile
 end

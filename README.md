@@ -18,7 +18,7 @@ E(Generated Build Artifacts)
 subgraph one["UnrealCodeBuilder<br> Github Workflows"]
     direction LR
     CA(UnrealCodeBuilder<br>Github Action)
-    D((Self-created/Guganana's<br/> MinimalUE Build
+    D((Self-created/Guganana's<br> MinimalUE Build))
     Compile(Compile Plugin)
     CA --- D
     D --> Compile

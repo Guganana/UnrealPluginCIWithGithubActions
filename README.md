@@ -6,12 +6,12 @@ It relies heavily on [MinimalUE](https://github.com/Guganana/MinimalUE) to gener
 
 Due to Unreal Engine's EULA, <ins>it's not possible to share the minimal versions of the engine publicly</ins> — thus, there will be two ways of getting this working for you:
 - Creating your own MinimalUE build and hosting it privately (will be releasing a guide in the future)
-- Joining our private team, which uses our internal version of MinimalUE build that can only be accessed by GitHub runners (currently only inviting select individuals)
+- Joining our private team, which uses our internal version of MinimalUE build that can only be accessed by GitHub runners (currently only inviting a limited number of people)
 
 
 > This repository already builds its source code every time we make a commit 😎 — [Give it a look!](https://github.com/Guganana/UnrealPluginCIWithGithubActions/actions)
 
-**This is still an ongoing effort — we will be making it more widely available with time** 
+**This is still an ongoing effort — we hope to make it more widely available with time** 
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '14px', 'fontFamily': '"Segoe UI","Noto Sans"'}}}%%
@@ -76,7 +76,7 @@ To make the GitHub runners to access our private MinimalUE, you're required to s
 ## 4. Done!
 You can now go to the Actions Panel to manually trigger a build. You should get the build artifacts for the latest 3 engine versions if it compiles successfuly.
 
-Make sure to download the build artifacts and upload them on your preffered file hosting service to provide the Unreal Engine Marketplace with plugin download links.
+Make sure to download the build artifacts and upload them on your preferred file hosting service to provide the Unreal Engine Marketplace with plugin download links.
 
 You're always free to extend your automation further and integrate it with other platforms.
 

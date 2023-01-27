@@ -18,36 +18,36 @@ graph TB
 A(Your Code Plugin<br>repo on Github)
 E(Generated Build Artifacts)
 
-subgraph one[" "]
+subgraph one["Run CompilePlugin.yml available on UnrealCodeBuilder Repo"]
     direction LR
     C[(MinimalUE<br>Build)]
     D(UnrealCodeBuilder<br>Github Action)
-    Compile(Compile Plugin)
+    Compile(Compile Plugin for 3 latest major UE versions)
     C -.- D
     D --> Compile
 end
 
-A -- Run UnrealCodeBuilder Workflow --> one
+A --> one
 one --> E
 ```
 
 # Getting Started:
 
-> ❗❗ For now section only applies to people using Guganana's private version of MinimalUE.
+> ❗❗ For now, this section only applies to people using Guganana's private version of MinimalUE.
 
 ## 1. Defining the plugin metadata
 
 [](./.metadata)
-To produce the build artifacts, [UnrealCodeBuilder workflows](https://github.com/Guganana/UnrealCodeBuilder) require you to specify additional information about the plugin (i.e. ProductName, Version, ReleaseFormat).
+To produce the build artifacts, [UnrealCodeBuilder workflows](https://github.com/Guganana/UnrealCodeBuilder) requires you to specify additional information about the plugin (i.e. ProductName, Version, ReleaseFormat).
 
- For that you need to emulate the folder and file structure found in [.metadata](./.metadata) and fill the files with the relevant data for your project.
+ For that you need to recreate the folder and file structure found in [.metadata](./.metadata), filling the files with the relevant data for your project.
 - [.metadata](./.metadata)
-    - [friendlyVersion](./.metadata/friendlyVersion) | e.g: 1.0.2
-    - [productName](./.metadata/productName) | e.g: MyVeryCoolPlugin
-    - [releaseVersionFormat](./.metadata/releaseVersionFormat) | Dynamically evaluated (you can read other env variables) | example uses the friendlyVersion + the commit SHA -> 1.0.2(abcdef)
-    - [releaseNameFormat](./.metadata/releaseNameFormat) | Dynamically evaluated | Used to generate the artifact names (IMPORTANT: make sure to always include $env:UEVersion in the string so you can diferentiate the build artifacts for each unreal version)
+    - [friendlyVersion](./.metadata/friendlyVersion) | user side version of your project | e.g: 1.0.2
+    - [productName](./.metadata/productName) | Your plugin's name (without whitespace)| e.g: MyVeryCoolPlugin
+    - [releaseVersionFormat](./.metadata/releaseVersionFormat) | Dynamically evaluated format string allowing you to inject extra information into your version | example uses the friendlyVersion + the commit SHA resulting in -> ```1.0.2(abcdef)```
+    - [releaseNameFormat](./.metadata/releaseNameFormat) | Dynamically evaluated format string used to generate the artifact names (IMPORTANT: make sure to always include $env:UEVersion in the string so you can diferentiate the build artifacts for each unreal version)
 
-For advanced users, adding more files into  [.metadata](./.metadata) will converted their names and values into environment variables that can be queried by the "Format" ones
+For advanced users, adding more files into  [.metadata](./.metadata) will turn their names/values into environment variables that can be queried by the "format" metadata files
 
 If you want to keep it simple, you can just copy the example files.
 
@@ -55,7 +55,7 @@ If you want to keep it simple, you can just copy the example files.
 
 Now you can create your own Github Actions workflow and reference [UnrealCodeBuilder's workflows](https://github.com/Guganana/UnrealCodeBuilder):
 
-Inside ```./.github/workflows/```, create your own workflow yaml file which emulates [BuildAndGenerateArtifactsForMarketplace.yml](/.github/workflows/BuildAndGenerateArtifactsForMarketplace.yml):
+Inside ```./.github/workflows/```, create your own workflow yaml file which replicates [BuildAndGenerateArtifactsForMarketplace.yml](/.github/workflows/BuildAndGenerateArtifactsForMarketplace.yml):
 
 https://github.com/Guganana/UnrealPluginCIWithGithubActions/blob/bc650c1e19dcde5e396fb08e3ed035f62e2b6510/.github/workflows/BuildAndGenerateArtifactsForMarketplace.yml#L1-L31
 

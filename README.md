@@ -14,6 +14,7 @@ Due to Unreal Engine's EULA, <ins>it's not possible to share the minimal version
 **This is still an ongoing effort — we will be making it more widely available with time** 
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '14px', 'fontFamily': '"Segoe UI","Noto Sans"'}}}%%
 graph TB
 A(Your Code Plugin<br>repo on Github)
 E(Generated Build Artifacts)
@@ -22,13 +23,19 @@ subgraph one["Run CompilePlugin.yml available on UnrealCodeBuilder Repo"]
     direction LR
     C[(MinimalUE<br>Build)]
     D(UnrealCodeBuilder<br>Github Action)
-    Compile(Compile Plugin for 3 latest major UE versions)
+    Compile(Compile plugin for<br>latest major UE versions)
     C -.- D
     D --> Compile
 end
 
 A --> one
 one --> E
+
+style one fill:#55A6ee, stroke:transparent,color:#fff;
+classDef customStyle fill:#fc5454, stroke:#fff, stroke-width:2px,color:white;
+class A,C,D,E,Compile customStyle;
+
+%%style A fill:transparent,stroke:#000,stroke-width:2px,margin:10px
 ```
 
 # Getting Started:

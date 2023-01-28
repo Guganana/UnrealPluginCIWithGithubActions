@@ -64,7 +64,7 @@ Now you can create your own Github Actions workflow and reference [UnrealCodeBui
 
 Inside ```./.github/workflows/```, create your own workflow yaml file which replicates [BuildAndGenerateArtifactsForMarketplace.yml](/.github/workflows/BuildAndGenerateArtifactsForMarketplace.yml):
 
-https://github.com/Guganana/UnrealPluginCIWithGithubActions/blob/bc650c1e19dcde5e396fb08e3ed035f62e2b6510/.github/workflows/BuildAndGenerateArtifactsForMarketplace.yml#L1-L31
+https://github.com/Guganana/UnrealPluginCIWithGithubActions/blob/9cceb57170e644c0b9295d417fe107e835c99484/.github/workflows/BuildAndGenerateArtifactsForMarketplace.yml#L1-L34
 
 ## 3. Setting up GUGANANA_BUILD_KEY and UNREALCODEBUILDER_ENGINE_ENDPOINT secrets
 To make the GitHub runners to access our private MinimalUE, you're required to set up the GUGANANA_BUILD_KEY and UNREALCODEBUILDER_ENGINE_ENDPOINT secrets:

@@ -28,5 +28,7 @@ jobs:
     with:
       projectArtifactName: "SourceCode"
       prepareForMarketplace: true
-    secrets: inherit
+    secrets:
+      UNREALCODEBUILDER_ENGINE_ENDPOINT: ${{ secrets.UNREALCODEBUILDER_ENGINE_ENDPOINT }}
+      GUGANANA_BUILD_KEY : ${{ secrets.GUGANANA_BUILD_KEY  }}
     

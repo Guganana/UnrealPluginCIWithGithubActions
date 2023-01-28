@@ -87,9 +87,10 @@ You're always free to extend your automation further and integrate it with other
 |Supported for UE versions| 4.27 \| 5.0 \| 5.1  |
 |Compilation for Win64|✅|
 |Automatically prepare for Marketplace release|✅|
-|Compilation for MacOS|❌|
-|Compilation for Linux|❌|
-|Run tests after compilation|❌|
+|Run tests after compilation|❌ not yet|
+|Compilation for MacOS|❌ not yet|
+|Compilation for Linux|❌ not yet|
+|Generate Precompiled binaries able to be distributed|❌ not yet|
 
 # Privacy and Telemetry disclosure
 When using [UnrealCodeBuilder](https://github.com/Guganana/UnrealCodeBuilder), we send a single telemetry event containing the repository name & repository owner. This helps us gauge the usage of our tools and know how important they are to the community.

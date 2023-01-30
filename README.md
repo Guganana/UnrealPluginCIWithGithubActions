@@ -91,6 +91,7 @@ You're always free to extend your automation further and integrate it with other
 |Compilation for MacOS|❌ not yet|
 |Compilation for Linux|❌ not yet|
 |Generate Precompiled binaries able to be distributed|❌ not yet|
+|Automatically deploy to File Hosting services|❌ not yet|
 
 # Privacy and Telemetry disclosure
 When using [UnrealCodeBuilder](https://github.com/Guganana/UnrealCodeBuilder), we send a single telemetry event containing the repository name & repository owner. This helps us gauge the usage of our tools and know how important they are to the community.

@@ -20,7 +20,7 @@ jobs:
         with:
           name: "SourceCode"
           path: ./
-          retention-days: 1
+          retention-days: 30
           
   build:
     needs: prepareProject

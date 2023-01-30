@@ -51,7 +51,7 @@ To produce the build artifacts, [UnrealCodeBuilder workflows](https://github.com
 - [.metadata](./.metadata)
     - [friendlyVersion](./.metadata/friendlyVersion) | user side version of your project | e.g: 1.0.2
     - [productName](./.metadata/productName) | Your plugin's name (without whitespace)| e.g: MyVeryCoolPlugin
-    - [releaseVersionFormat](./.metadata/releaseVersionFormat) | Dynamically evaluated format string allowing you to inject extra information into your version | example uses the friendlyVersion + the commit SHA resulting in -> ```1.0.2(abcdef)```
+    - [releaseVersionFormat](./.metadata/releaseVersionFormat) | Dynamically evaluated format string allowing you to inject extra information into your version | example uses the friendlyVersion + the commit SHA resulting in -> ```1.0.2(abcdefg)```
     - [releaseNameFormat](./.metadata/releaseNameFormat) | Dynamically evaluated format string used to generate the artifact names (IMPORTANT: make sure to always include $env:UEVersion in the string so you can diferentiate the build artifacts for each unreal version)
 
 For advanced users, adding more files into  [.metadata](./.metadata) will turn their names/values into environment variables that can be queried by the "format" metadata files

@@ -1,8 +1,10 @@
 # UnrealPluginCIWithGithubActions
 
+> ❗ For now this guide only works for people using Guganana's private MinimalUE build (invite only). We do have plans on extending this further and giving people the option to create their own versions of MinimalUE.
+
 UnrealPluginCIWithGithubActions is a practical example on using **<ins>GitHub Actions free tier</ins>** with [UnrealCodeBuilder](https://github.com/Guganana/UnrealCodeBuilder) to automate the compilation of your Code Plugins for the 3 latest Unreal Engine versions + automatically prepare them for distribution on the Unreal Engine Marketplace.
 
-It relies heavily on [MinimalUE](https://github.com/Guganana/MinimalUE) to generate a trimmed, compressed version of Unreal Engine that can only compile projects (going from 50GB to 150MB on UE 5.1), allowing us to easily manage the engine inside the GitHub Actions environment.
+It relies heavily on our other tool [MinimalUE](https://github.com/Guganana/MinimalUE) to generate a trimmed, compressed version of Unreal Engine that can only compile projects (going from 50GB to 150MB on UE 5.1), allowing us to easily manage the engine inside the GitHub Actions environment.
 
 Due to Unreal Engine's EULA, <ins>it's not possible to share the minimal versions of the engine publicly</ins> — thus, there will be two ways of getting this working for you:
 - Creating your own MinimalUE build and hosting it privately (will be releasing a guide in the future)
@@ -39,8 +41,6 @@ class A,C,D,E,Compile customStyle;
 ```
 
 # Getting Started:
-
-> ❗❗ For now, this section only applies to people using Guganana's private version of MinimalUE.
 
 ## 1. Defining the plugin metadata
 

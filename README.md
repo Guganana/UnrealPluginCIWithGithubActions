@@ -1,6 +1,6 @@
 # UnrealPluginCIWithGithubActions
 
-> ❗ For now this guide only works for people using Guganana's private MinimalUE build (invite only). We do have plans on extending this further and giving people the option to create their own versions of MinimalUE.
+> ❗ For now this guide only works for people using Guganana's private MinimalUE build ([invite only](https://forms.gle/Ai9K6qVSL7mscodi6)). We do have plans on extending this further and giving people the option to create their own versions of MinimalUE.
 
 UnrealPluginCIWithGithubActions is a practical example on using **<ins>GitHub Actions free tier</ins>** with [UnrealCodeBuilder](https://github.com/Guganana/UnrealCodeBuilder) to automate the compilation of your Code Plugins for the 3 latest Unreal Engine versions + automatically prepare them for distribution on the Unreal Engine Marketplace.
 

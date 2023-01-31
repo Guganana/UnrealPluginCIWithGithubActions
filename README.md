@@ -76,7 +76,7 @@ To make the GitHub runners access our private MinimalUE build, you're required t
 ## 4. Done!
 You can now go to the Actions Panel to manually trigger a build. You should get the build artifacts for the latest 3 engine versions if it compiles successfuly.
 
-Make sure to download the build artifacts and upload them to your preferred file hosting service so you can generate download links for thew Unreal Engine Marketplace.
+Make sure to download the build artifacts and upload them to your preferred file hosting service so you can generate download links for the Unreal Engine Marketplace.
 
 You're always free to extend your automation further and integrate it with other platforms.
 

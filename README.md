@@ -12,20 +12,6 @@ Due to Unreal Engine's EULA, <ins>it's not possible to share the minimal version
 
 > This repository already builds its source code every time we make a commit 😎 — [Give it a look!](https://github.com/Guganana/UnrealPluginCIWithGithubActions/actions)
 
-# Current feature support
-
-| Feature  | Supported  |
-|---|---|
-|Supported for UE versions| 4.27 \| 5.0 \| 5.1  |
-|Compilation for Win64|✅|
-|Automatically prepare for Marketplace release|✅|
-|Compilation tasks are run in parallel|✅|
-|Run tests after compilation|❌ not yet|
-|Compilation for MacOS|❌ not yet|
-|Compilation for Linux|❌ not yet|
-|Generate Precompiled binaries able to be distributed|❌ not yet|
-|Automatically deploy to File Hosting services|❌ not yet|
-
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '14px', 'fontFamily': '"Segoe UI","Noto Sans"'}}}%%
 graph TB
@@ -52,6 +38,21 @@ class A,C,D,E,Compile customStyle;
 ```
 
 This is still an ongoing effort — we hope to make it more widely available with time.
+
+
+# Current feature support
+
+| Feature  | Supported  |
+|---|---|
+|Supported for UE versions| 4.27 \| 5.0 \| 5.1  |
+|Compilation for Win64|✅|
+|Automatically prepare for Marketplace release|✅|
+|Compilation tasks are run in parallel|✅|
+|Run tests after compilation|❌ not yet|
+|Compilation for MacOS|❌ not yet|
+|Compilation for Linux|❌ not yet|
+|Generate Precompiled binaries able to be distributed|❌ not yet|
+|Automatically deploy to File Hosting services|❌ not yet|
 
 # Getting Started:
 

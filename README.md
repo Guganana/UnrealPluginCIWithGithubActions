@@ -47,7 +47,7 @@ This is still an ongoing effort — we hope to make it more widely available wit
 |Supported for UE versions| 4.27 \| 5.0 \| 5.1  |
 |Compilation for Win64|✅|
 |Automatically prepare for Marketplace release|✅|
-|Compilation tasks are run in parallel|✅|
+|Compilation tasks run in parallel|✅|
 |Run tests after compilation|❌ not yet|
 |Compilation for MacOS|❌ not yet|
 |Compilation for Linux|❌ not yet|

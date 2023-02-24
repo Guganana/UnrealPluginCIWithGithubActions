@@ -72,7 +72,21 @@ For advanced users, adding more files into  [.metadata](./.metadata) will turn t
 
 If you want to keep it simple, you can just copy the example files.
 
-## 2. Creating the workflow:
+## 2. Prepare .uplugin file for auto-fill (optional)
+On this early version, our build tools are programmed to replace specific (hard-coded) snippets of text with the proper information for your release:
+
+```ENGINE_VERSION``` will get replaced with respective target Engine version.
+
+```DEV_VERSION_NAME```  gets replaced by the release version of your plugin. e.g: ```1.0.2(abcdefg)```.
+
+```123456789```  gets replaced by a unix timestamp of the moment the script is running — useful to fill the 'Version' field.
+
+Here's an example on how we use it
+https://github.com/Guganana/UnrealPluginCIWithGithubActions/blob/04348c77365d0251b07ea1074a8ef37fdbf70ea2/EmptyCodePlugin.uplugin#L1-L26
+
+With time we plan on moving to a more versatile and less hard-coded approach.
+
+## 3. Creating the workflow:
 
 Now you can create your own Github Actions workflow and reference [UnrealCodeBuilder's workflows](https://github.com/Guganana/UnrealCodeBuilder):
 
@@ -80,14 +94,14 @@ On your repository, inside ```./.github/workflows/```, create your own workflow 
 
 https://github.com/Guganana/UnrealPluginCIWithGithubActions/blob/9cceb57170e644c0b9295d417fe107e835c99484/.github/workflows/BuildAndGenerateArtifactsForMarketplace.yml#L1-L34
 
-## 3. Setting up the secrets
+## 4. Setting up the secrets
 To make the GitHub runners access our private MinimalUE build, you're required to set up the ```GUGANANA_BUILD_KEY``` and ```UNREALCODEBUILDER_ENGINE_ENDPOINT``` secrets:
 1. On your repository page, click on the settings panel.
 2. Expand the ```Secrets and variables``` option on the side panel followed by ```Actions```.
 3. Add a new Repository Secret - the secret name should be ```GUGANANA_BUILD_KEY``` while the key is the string provided by us.
 4. Create another secret for ```UNREALCODEBUILDER_ENGINE_ENDPOINT``` with the value provided by us.
 
-## 4. Done!
+## 5. Done!
 You can now go to the Actions Panel to manually trigger a build. You should get the build artifacts for the latest 3 engine versions if it compiles successfuly.
 
 Make sure to download the build artifacts and upload them to your preferred file hosting service so you can generate download links for the Unreal Engine Marketplace.
